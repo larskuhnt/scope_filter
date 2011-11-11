@@ -1,6 +1,4 @@
 # encoding: utf-8
-require_relative 'configuration'
-
 module ScopeFilter
   module ActiveRecord
     

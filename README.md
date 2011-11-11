@@ -1,6 +1,6 @@
 # Scope-Filter
 
-Scope-Filter is a filter- and search-library for ActiveRecord models using scopes.
+scope_filter is a filter- and search-library for ActiveRecord models using scopes.
 
 You can define the filterable and sortable scopes and fields and filter records with the `scope_filter` method. 
 

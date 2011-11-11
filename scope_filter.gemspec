@@ -4,13 +4,13 @@ $:.unshift lib unless $:.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = "scope_filter"
-  s.version     = '0.9'
+  s.version     = '0.9.1'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Lars Kuhnt"]
   s.email       = ["lars.kuhnt@gmail.com"]
   s.homepage    = "http://github.com/larskuhnt/scope_filter"
   s.summary     = "ActiveRecord filter- and search-library using scopes"
-  s.description = "Scope-Filter is a filter- and search-library for ActiveRecord models using scopes"
+  s.description = "scope_filter is a filter- and search-library for ActiveRecord models using scopes"
  
   s.required_rubygems_version = ">= 1.3.6"
   
