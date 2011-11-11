@@ -22,14 +22,14 @@ module ScopeFilter
           values.inject(init_scope) do |rel, q|
             field = q.first.to_sym
             value = q.last
-            return rel if value.blank?
-            if cond = @@sf_config.fields[field]
-              rel = rel.where(cond[:condition], cond[:pattern] ? cond[:pattern].call(value) : value)
-            elsif cond = @@sf_config.scopes[field]
-              rel = cond[:arg] ? rel.send(field, value) : rel.send(field)
-            else
-              rel
+            unless value.blank?
+              if cond = @@sf_config.fields[field]
+                rel = rel.where(cond[:condition], cond[:pattern] ? cond[:pattern].call(value) : value)
+              elsif cond = @@sf_config.scopes[field]
+                rel = cond[:arg] ? rel.send(field, value) : rel.send(field)
+              end
             end
+            rel
           end
         end
         

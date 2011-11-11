@@ -79,6 +79,10 @@ describe ScopeFilter::ActiveRecord do
     Person.scope_filter(:older_than => 20).size.should == 6
   end
   
+  it "should filter 6 persons older_than 20 (regression 1)" do
+    Person.scope_filter(:firstname_ends_with => '', :older_than => 20).size.should == 6
+  end
+  
   it "should return 2 dead persons older_than 40" do
     Person.scope_filter(:older_than => 40, :dead => true).size.should == 2
   end
